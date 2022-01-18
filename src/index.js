@@ -87,7 +87,7 @@ function handleExponentLast(equationParts) {
 function handleEquation(equation) {
     console.log(equation);
     // No = sign
-    let parenthCount = (equation.match(/\((?>\((?<c>)|[^()]+|\)(?<-c>))*(?(c)(?!))\)/)).length;
+    let parenthCount = (equation.match(/[()]/)).length;
     if (equation.includes("^")) {
         console.log("includes power");
         if (parenthCount === 2) {
