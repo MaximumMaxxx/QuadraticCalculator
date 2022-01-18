@@ -1,4 +1,5 @@
 function calculateQuadratic(form: HTMLFormElement) {
+    console.log("I was pressed")
     let output = document.getElementById("Output");
     event.preventDefault();
 
@@ -95,16 +96,16 @@ function handleExponentLast(equationParts: Array<String>) {
 function handleEquation(equation: string) {
     console.log(equation);
     // No = sign
-    let parenthCount = (equation.match(/[()]/)).length; 
+    let parenthCount = equation.match(/\([()]*\)/).length; 
     if (equation.includes("^")) {
         console.log("includes power");
         
-        if (parenthCount === 2) {
+        if (parenthCount === 1) {
             return handleExponentialFrom(equation);
         } else {
             return handleExpandedForm(equation);
         }
-    } else  if (parenthCount === 4) {
+    } else  if (parenthCount === 2) {
         handleDoublePareth(equation);
     } else {
         return "You did something wrong lol"
