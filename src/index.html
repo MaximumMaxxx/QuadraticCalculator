@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quadratic Calc</title>
+    <link rel="stylesheet" href="output.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="flex-col flex items-center">
+      <h1 class="text-center text-4xl mt-2">Max's Quadratic Calculator</h1>
+      <form
+        onsubmit="event.preventDefault()"
+        class="flex items-center justify-center h-32 flex-col"
+        id="InputForm"
+      >
+        <input
+          class="bg-gray-400 w-full mt-3 text-center rounded-lg"
+          type="text"
+          name="equation"
+        />
+        <button
+          type="button" 
+          onclick="calculateQuadratic(this.form)"
+          class="bg-slate-300 rounded-lg mt-2 px-2 hover:bg-slate-400 transition-all"
+        >
+          Submit
+        </button>
+      </form>
+      <div class="h-32 w-4/5 sm:w-3/5 bg-slate-300 rounded-lg">
+        <h1 class="text-center">output</h1>
+        <div id="Output" class="h-full w-full p-2"></div>
+      </div>
+      <div class="flex flex-col w-3/5 gap-2">
+        <span>
+          Welcome to the Quadratic Calculator, this is a simple app that just
+          calculates quadratics for you, quadratics are annoying but computers
+          should be helpful.
+        </span>
+        <span>
+          If you want to use the app just type your quadratic into the input
+          box. Note: use ^ to signify powers. Ex: x^2.
+        </span>
+        <span>
+          You can look at the source code if you want
+          <a
+            href="https://github.com/"
+            class="text-blue-500 underline hover:text-blue-400 transition-colors"
+            >Here</a
+          >
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
