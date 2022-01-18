@@ -6,13 +6,8 @@ function calculateQuadratic(form: HTMLFormElement) {
     let equation = form.equation.value;
 
     let equationSplit: Array<String> = equation.split("=");
-
-    if (equationSplit.length === 1) {
-    // No = sign
     
-    } else if (equationSplit.length === 2) {
-        // There is an = sign
-
+    if (equationSplit.length === 2 || equationSplit.length === 1) {
         if (equationSplit[0] !== "0") {
             // If the left side of the '=' is not 0
             [equationSplit[0], equationSplit[1]] = [equationSplit[1],equationSplit[0]];
